@@ -1,0 +1,126 @@
+/* 
+    -------------------------------------
+        Autor: Osvaldo Aquino
+        Nickname: owi
+        REPASO DE ESTRUCTURA BÁSICA CSS
+    -------------------------------------
+*/
+
+
+/*
+    - "body ahora mismo es el que esta controlando al header.
+    - Si le digo al padre "body" que su "hijo "header" este en el centro 
+    de la página.
+        - Como el Padre(body) es el que ordena al hijo(header). 
+        - Y la zona en la que trabaja el "body" es toda la pagina  
+        (en el firefox developer se pueden ver la zonas de trabajo)
+        - El header si se mueve al centro de la pagina.
+    - Pero si yo ordeno al header(el hijo) eso. No va a ocurrir esto.
+        - No se va a poder mover al centro. 
+        - Porque header solo tiene un trozo superior de espacio que controla
+        -  Tiene un 24 px que controla. (vizualizar en el firefox developer)
+    - 
+        
+*/   
+
+
+
+body
+    {
+        /*Lo primero que hay que decirle a body. Es que es un FLEXBOX*/
+        display : flex;
+
+        /* 
+            - Todas las etiquetas de HTML tienen un "display"
+                - display : block
+                - display : line
+                - entre otros. 
+            - Ahora, acabo de cambiar la disposición del "body" a un "display : flex" 
+                - Y esto, lo convierte en un FLEXBOX.
+            - Ahora, cuando conviertes a "body" en un FLEXBOX.
+                - Es que recien ahora, puedes dar ordenes a sus hijs.
+        */
+
+        /*
+            - Vamos a coger el "header" y vamos a darle una orden 
+        */
+		
+		/*
+			- Si mi padre es "nav". Yo le doy las ordenes a "nav" . OK
+			- Pero si le doy las ordenes al "body" ¿por qué me sigue respondiendo bien?
+				- El "body" su hijo directo es "header". Pero es que dentro del "header"
+				no hay nada mas.
+				- Por lo que, lo unico que puedo mover visualmente es el "nav".
+				- Por eso responde visualmente. Y mueve el "nav" 
+			- Caso contrario, moveria y ordenaria un monton de cosas que estan adentro de 
+			"header". Moveria
+				- Logotipo
+				- El "nav"
+				- El banner, etc.
+			- Y no quedaria bien. 
+		*/
+
+        /* ORDEN EN HORIZONTAL - RESPONSIVE*/
+        justify-content: center;
+
+        /* ORDEN EN VERTICAL - RESPONSIVE*/ 
+		
+		
+		/*
+			- ¿Toni como puede ser RESPONSIVE si no le has metido nada como "MediaQuery" ni nada de eso?
+				- No. No nos equivoquemos. Los media query es un atraso cuando sabes FLEXBOX y GRID
+				- Si sabes FLEXBOX y GRID. Los media query solo se pondran en casos MUY CONCRETOS. 
+				- Porque  FlexBox y Grid Ya establecen unas bases de responsive como deben ser. 
+				- Las personas que estan añadiendo constantemente "media query" no estan trabajando en el 
+				2020.
+			- Las personas que trabajamos en 2020. 
+				- Trabajamos con FlexBox que ya son responsive. 
+				- Trabajamos con Grid que ya son responsive.
+				- Y cuando necesitamos una ayuda extra, nos vamos a "arrobamedia"
+				- Pero no es el "Flujo" de nuestro trabajo.
+			- El presente es esto "Flexbox" y "Grid". 
+				- Los media query y tal, vinieron para ayudar cuando no habia Flexbox. 
+			
+        */
+        
+        /* Viewport  height  - Vh */
+        height : 100vh ;
+
+        /* Color de fondo */
+        background-color: #ccc9c9;
+
+        /*Convertir "body" en un FLEXBOX*/
+        display : flex; 
+
+        /* RESPONSIVE EN HORIZONTAL */
+        justify-content: center;
+
+        /*REPONSIVE EN  VERTICAL*/
+        align-items: center;
+    }
+
+
+
+	
+		
+/*
+/* agarramos el body como display : flex
+body
+    {
+        background-color: #f7f7f7;  
+    }
+
+*/
+/* // Obtenemos un responsive en 3 parrafos  */
+ /* aqui controlo todos los hijos de header */
+/* header 
+    {
+        // los view porteig 
+        height 100vh;
+        display : flex;
+        /*controla el horizontal*/
+        /* justify-content: :center; */
+        /*controla la vertical*/
+        /* align-items: center; */
+    /* }  */
+

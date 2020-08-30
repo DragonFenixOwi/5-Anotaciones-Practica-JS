@@ -35,71 +35,152 @@
       integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
       crossorigin="anonymous"
     />
+      <!-- Debe ir antes de tus estilos.ss -->
+      <!-- 
+          TECLADO ABREVIADO 
+          link:css 
+      -->
+    <link rel="stylesheet" href="css/reset.css">
 
     <!-- Nuestro Framework de CSS preferido, mi preferido es BULMA -->
     <link rel="stylesheet" href="node_modules/bulma/css/bulma.min.css" />    
     
-    <!-- Nuestro CSS Compilado a través de SASS ó sin compilar solo CSS básico -->
-    <link rel="stylesheet" href="css/estilos.css" />
+
+    <!-- 
+        // Nuestro CSS Compilado a través de SASS ó sin compilar solo CSS básico 
+        <link rel="stylesheet" href="css/estilos.css" />
+    -->
+
+    <!-- 
+        - Práctica CSS Caja FlexBox de Body 
+          - Se utilizan 3 "id" 
+            - 1 en el header
+            -  otro en el main
+            - y uno ultimo en el footer 
+    -->
+    <link rel="stylesheet" href="css/Cajas_Flexbox.css" />
+
     
-  </head>
-  <body>
-    <header>
-      <!--
-        *
-        * Bloque HEADER
-        *
-      -->
-           <figure id="logo">
-            <!--
-             *
-             * Bloque LOGO
-             *
-            -->
+    </head>
+    <body>
+      <header>
+        <!-- Bloque HEADER-->
+
+
+        <id id="Header">Header</id>
+
+
+
+
+
+          <figure id="logo">
+            <!--  BLOQUE LOGO  -->
                 <img src="" alt="">
-           </figure>
+          </figure>
       
-           <nav id="navegacionPrincipal">
+          <nav id="navegacionPrincipal">
+            <!--   Bloque Links de Navegación Principal  -->
+
             <!--
-             *
-             * Bloque Links de Navegación Principal
-             *
+                TECLADO ABREVIADO  
+                a[href="#"]{links}*5 
+            -->
+
+            <!--
+            Tenemos una estructura de 5 Links 
+              - No se me ha ocurrido meter "list"
+              - Tampoco se me ha ocurrido meter "ul"
+            Porque ya sabemos que las "a's" o "a href", son in-line y no es necesario
+            Si yo lo quiero en horizontal para que le voy a meter "list" que son bloques
+              -->
+
+            
+            <!-- En comentario por practica de Cajas_Flexbox.css
+              <a href="#">links</a>
+              <a href="#">links</a>
+              <a href="#">links</a>
+              <a href="#">links</a>
+              <a href="#">links</a>
+            -->
+
+
+            <!-- 
+                - La movida de FLEXBOX es fácil 
+                  - Porque solo le esta hablando de lo que le pasas a los hijos del padre
+                  - ¿que significa eso?
+                  - Ya sabeis que "nav" es el padre de las "5 a's(a href)"
+                  - Sabeis que "body"  es el padre 
+                    - del "header", 
+                    - del "main" 
+                    y del "footer"
+                  - Pero "body" no es el padre del "nav". Es decir, no es su hijo directo.
+                - FLEXBOX funciona solo con hijos directos y eso le da la potencia que tiene.
+                - Si jugara (para FLEXBOX) con. Me pongo en un body y veo que hace una "a"
+                  - Pues malo.
+                - El FLEXBOX funciona como que 
+                  - El Padre es "nav" y yo le voy a dar ordenes a sus hijos que son las "a's"
+                  - El Padre es "body" y yo le voy a dar ordenes a sus hijos (header,main y footer) 
+                - FLEXBOX no llega a los hijos de 
+                  - header (que es el "nav") 
+                  - a los hijos de main (que son "section" y "article"),
+                  - y a los hijos del footer 
+                - Ya sabeis que el "nav" es el padre de las "a's (a href)" 
+                
+                
+              - ¿quien es el padre directo de "nav"?
+                - "header"
+                - Si yo quiero que le pase algo a "nav". 
+                  - Tengo que hablar con "header".
+                  - No tengo que hablar con "nav"
+
+                - Lo explico de otra manera
+                  - Si yo tengo que darle ordenes. Al hijo
+                  - El padre se las da. No se generan en el hijo.
+                  
+              - Por ejemplo. Para mover los "links" "a href" al centro de la pantalla
+                - ¿tengo que decir a href para que se vaya al centro?
+                  - no
+                  -Le tengo que decir a su padre. Que tiene que ir al centro de la pantalla
+              
+              - Ahora mismo tanto el "header" como el "nav" son iguales porque no hay 
+              ninguna información. Se veran identicos. Pero cuando exista mas información 
+              se tiene que tener muy encuenta la jerarquia de PADRE-HIJO.
+              
+              - Al "body", como al "html" o al "header" (o al resto) no se les ocurra poner un "class" o 
+              un "id"
+                - "header"  solo hay uno. 
+                -  "main" solo hay uno. Bueno puede haber dos pero 
+              - Pero "body", "header", "footer" y "html" solo hay uno a nadie que se le ocurra poner "id"
+                o "class" para buscarlos  
             -->
           </nav>
       
     </header>
 
     <main>
-      <!--
-        *
-        * Bloque MAIN
-        *
-      -->
-      
+      <!--Bloque MAIN -->
+
+
+          <id id="Main">Main</id>
           <section>
-            <!--
-             *
-             * Bloque SECTION
-             *
-            -->
+            <!--Bloque SECTION -->
+
+
           </section>
       
           <article>
-            <!--
-             *
-             * Bloque ARTICLE
-             *
-            -->
+            <!-- Bloque ARTICLE-->
+
+
           </article>
       
     </main>
 
     <footer>
-      <!--
-        *
-        * Bloque FOOTER
-        *
-        -->
+      <!-- Bloque FOOTER    -->
+  
+      <id id="Footer">Footer</id>
+
     </footer>
   </body>
 </html>
